@@ -1,0 +1,17 @@
+n = int(input())
+s = set(map(int, input().split()))
+num = int(input())
+
+for i in range(num):
+    line = input().split()
+    
+    if line[0] == "pop":
+        s.pop()
+    elif line[0] == "remove":
+        x = int(line[1])
+        s.remove(x)
+    else:
+        x = int(line[1])
+        s.discard(x)
+
+print(sum(s))
